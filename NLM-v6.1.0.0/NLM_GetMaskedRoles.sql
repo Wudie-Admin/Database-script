@@ -1,4 +1,14 @@
-CREATE PROCEDURE [CROMS].[NLM_GetMaskedRoles]   
+USE [CRMS_DEX_VAL]
+GO
+
+/****** Object:  StoredProcedure [CROMS].[NLM_GetMaskedRoles]    Script Date: 10/1/2019 4:46:09 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [CROMS].[NLM_GetMaskedRoles]   
     @p_fromdate_in datetime,
     @p_todate_in datetime
 AS
@@ -20,4 +30,7 @@ WHERE PRO_OVERALL_RECRUIT_STATUS  <> 'Unknown'
 ORDER BY PRO_PROTOCOL_NUMBER
 
 
+
 GO
+
+
