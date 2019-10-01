@@ -1,5 +1,15 @@
+USE [CRMS_DEX_VAL]
+GO
 
-CREATE PROCEDURE [CROMS].[NLM_GetSecondaryIDs]   
+/****** Object:  StoredProcedure [CROMS].[NLM_GetSecondaryIDs]    Script Date: 10/1/2019 5:23:52 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+ALTER PROCEDURE [CROMS].[NLM_GetSecondaryIDs]   
     @p_fromdate_in datetime,
     @p_todate_in datetime
 AS   
@@ -32,4 +42,7 @@ WHERE PRO_OVERALL_RECRUIT_STATUS  <> 'Unknown'
 	 AND PVR_CURRENT_VERSION_YN = 'Y' 
 	 AND [CROMS].NLM_FN_MarkCurrentProtocolAward(PRO_ID) IS NOT NULL
 ORDER BY PRO_PROTOCOL_NUMBER
+
 GO
+
+
