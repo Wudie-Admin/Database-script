@@ -8,7 +8,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-ALTER PROCEDURE [CROMS].[NLM_GetMaskedRoles]   
+ALTER PROCEDURE [CROMS].[NLM_GetMaskedRoles1]   
     @p_fromdate_in datetime,
     @p_todate_in datetime
 AS
